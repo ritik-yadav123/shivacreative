@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shiva Graphics - Home</title>
+<link rel="icon" href="img/shiva-logo.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* Hero Section */
+.hero {
+  height: 100vh; /* full viewport height */
+  width: 100vw;  /* full viewport width */
+  background: url("your-image.png") no-repeat center center;
+  background-size: cover; /* fills screen, crops if needed */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+.btn {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+}
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.section-sub {
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;          /* SAME IMAGE HEIGHT */
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* IMPORTANT */
+}
+
+.card h3 {
+  color: #0a3cff;        /* blue title like image */
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+
+/* Clients Grid */
+.clients-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+}
+.clients-container img {
+  max-width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.clients-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Testimonials */
+.testimonial {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-style: italic;
+}
+.testimonial p {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: #fff;
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+.card-link {
+  display: block;          /* 🔥 fixes alignment issue */
+  width: 100%;             /* take full grid cell width */
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Responsive */
+@media screen and (max-width:768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .clients-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width:480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .clients-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+<a href="index.html" class="logo">
+      <img src="img/shiva-logo.png" alt=" Logo" style="height:60px;">
+    </a>     
+    <ul class="nav-links" id="navLinks">
+    
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="clients.html">Clients</a></li>
+      <li><a href="contact.html">Contact</a></li>
+        <li>
+        <a href="files/ShivaGraphics-Brochure.pdf" download="ShivaGraphics-Brochure.pdf" title="Download PDF">
+          <i class="fas fa-download"></i> 
+        </a>
+      </li>
+      <li class="nav-phone">
+        <span class="separator"></span>
+        <a href="tel:+918059812423" title="Call Us">
+          <i class="fas fa-phone"></i> <span style="color:#070707;">+91 80598 12423</span>
+        </a>
+      </li>
+      
+    </ul>
+ <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <div class="social-icons">
+  <a href="https://www.facebook.com/khola10031985/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/shivagraphicsbhiwadi" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/@shivagraphicsbhiwadi" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="background-image:url('img/home-banner.png')">
+  <div class="hero-content">
+    <h1 class="fade-in">We Design. We Print. We Deliver.</h1>
+    <p class="fade-in delay-1">Creative design, professional printing, and digital solutions for bold brands.</p>
+    <div style="margin-top:1rem;">
+      <a href="services.html" class="btn fade-in delay-2">Explore Services</a>
+      <a href="contact.html" class="btn btn-outline fade-in delay-3" style="margin-left:.5rem;">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- About Us -->
+<section>
+  <h2 class="section-title">About Us</h2>
+  <p class="section-sub">Shiva Graphics has been delivering creative design and print solutions since 1997. Our mission is to help brands stand out with high-quality visuals and digital presence.</p>
+</section>
+
+<!-- Services -->
+<section>
+  <h2 class="section-title">Our Services</h2>
+
+  <div class="grid">
+      <a href="logo-design.html" class="card-link">
+    <div class="card">
+      <div class="card-img">
+        <img src="img/logo-design.jpg" alt="Logo Design">
+      </div>
+      <h3>Logo Design</h3>
+      <p>Memorable brand marks crafted for impact and clarity.</p>
+    </div></a>
+
+ <a href="offset-printing.html" class="card-link">
+    <div class="card">
+      <div class="card-img">
+        <img src="img/offset-print.jpg" alt="Offset Printing">
+      </div>
+      <h3>Offset Printing</h3>
+      <p>Premium quality for high-volume print jobs.</p>
+    </div></a>
+
+ <a href="web-design.html" class="card-link">
+    <div class="card">
+      <div class="card-img">
+        <img src="img/web-design.jpg" alt="Web Design">
+      </div>
+      <h3>Web Design</h3>
+      <p>Responsive websites that convert visitors into customers.</p>
+    </div></a>
+
+
+  <a href="business-cards.html" class="card-link">
+    <div class="card">
+      <div class="card-img">
+        <img src="img/business-cards.jpg" alt="Sticker Printing">
+      </div>
+      <h3>Business Cards</h3>
+      <p>Complete Printing & Design Solutions.</p>
+    </div></a>
+  </div>
+</section>
+
+
+<!-- Portfolio / Projects -->
+<!-- <section>
+  <h2 class="section-title">Our Work</h2>
+  <div class="grid">
+    <div class="card"><img src="img/project1.jpg" alt="Project 1"><h3>Branding Project</h3></div>
+    <div class="card"><img src="img/project2.jpg" alt="Project 2"><h3>Packaging Design</h3></div>
+    <div class="card"><img src="img/project3.jpg" alt="Project 3"><h3>Website Development</h3></div>
+  </div>
+</section>  -->
+
+<!-- Clients -->
+<section>
+  <h2 class="section-title">Our Clients</h2>
+  <div class="clients-container">
+    <img src="img/clients/BhiwadiPolymer.png" alt="Client 1">
+    <img src="img/clients/Bida.png" alt="Client 2">
+    <img src="img/clients/Hero.png" alt="Client 3">
+    <img src="img/clients/IndiaProperty.png" alt="Client 4">
+    <img src="img/clients/Pepsi.png" alt="Client 5">
+    <img src="img/clients/Samsung.png" alt="Client 6">
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section>
+  <h2 class="section-title">Testimonials</h2>
+  <div class="testimonial">
+    <p>"Shiva Graphics transformed our brand identity! Their designs are exceptional."</p>
+    <p>- Rajesh Kumar, Leoch Super Power India Pvt Ltd.</p>
+  </div>
+  <div class="testimonial">
+    <p>"Excellent printing quality and fast service. Highly recommended!"</p>
+    <p>- Priya Sharma, Goldmedal Electricals Pvt Ltd.</p>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section style="text-align:center;">
+  <h2 class="section-title">Ready to Work With Us?</h2>
+  <a href="contact.html" class="btn">Get in Touch</a>
+  <a href="https://wa.me/918059812423" class="btn btn-outline" style="margin-left:0.5rem;">Chat on WhatsApp</a>
+</section>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/918059812423?text=Hello%20Shiva%20Graphics%2C%20I%20want%20to%20enquire%20about%20your%20services" 
+   class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <img src="img/icons8-whatsapp-50 (1).png" alt="Chat on WhatsApp" style="width:50%; height:50%;">
+</a>
+
+<footer>
+  <p>© 1997 Shiva Graphics. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu(){ 
+  document.getElementById('navLinks').classList.toggle('active'); 
+}
+</script>
+</body>
+</html>

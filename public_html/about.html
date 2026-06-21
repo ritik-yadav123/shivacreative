@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shiva Graphics - About</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* --- About Page Enhancements --- */
+.container { max-width: 1100px; margin: 3rem auto; padding: 0 1rem; }
+.section-title { font-size: 2rem; text-align: center; margin-bottom: 1rem; color:#0078ff; }
+.section-sub { font-size: 1.1rem; text-align: center; margin-bottom: 2rem; color:#444; }
+
+/* Slider Styles */
+.story-slider { position: relative; overflow: hidden; max-width: 800px; margin: 10px auto; }
+.slide { display: none; text-align: center; }
+.slide.active { display: block; animation: fade 1s; }
+.slide img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.slide h3 { margin: 1rem 0 0.5rem; color:#0078ff; }
+.slide p { padding: 0 1rem 1.5rem; color:#555; font-size: 0.95rem; }
+
+/* Fade Animation */
+@keyframes fade { from {opacity: .4;} to {opacity: 1;} }
+
+/* Dots */
+.dots { text-align:center; margin-top:1rem; }
+.dot { height:12px; width:12px; margin:0 4px; background:#bbb; border-radius:50%; display:inline-block; cursor:pointer; transition:.3s; }
+.dot.active { background:#0078ff; }
+
+/* Team Section */
+.team { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; margin-top:2rem; text-align:center; }
+.team-member { background:#fff; border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,0.08); padding:1rem; transition:.3s; }
+.team-member img { width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:0.8rem; }
+.team-member h4 { margin-bottom:0.3rem; color:#0078ff; }
+.team-member p { font-size:0.9rem; color:#555; }
+.team-member:hover { transform: translateY(-5px); }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="img/shiva-logo.png" alt=" Logo" style="height:60px;">
+    </a>     
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html" >Services</a></li>
+      <li><a href="clients.html" >Clients</a></li>
+      <li><a href="contact.html" >Contact</a></li>
+      <li><a href="files/ShivaGraphics-Brochure.pdf" download="ShivaGraphics-Brochure.pdf" title="Download PDF"><i class="fas fa-download"></i></a></li>
+      <li class="nav-phone">
+        <span class="separator"></span>
+        <a href="tel:+918059812423" title="Call Us">
+          <i class="fas fa-phone"></i> <span style="color:#070707;">+91 80598 12423</span>
+        </a>
+      </li>
+    </ul>
+ <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/khola10031985/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/shivagraphicsbhiwadi" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@shivagraphicsbhiwadi" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="background-image:linear-gradient(rgba(0,120,255,.35), rgba(0,120,255,.35)), url('img/about-banner.jpg');height:400px;background-size:cover;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;">
+  <div class="hero-content">
+    <h1>About Us</h1>
+    <p>A creative studio delivering design, print, and digital excellence since 1997.</p>
+  </div>
+</section>
+
+<!-- Our Story -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Our Story</h2>
+    <p class="section-sub">We started as a small print shop and grew into a full-service creative partner trusted by businesses, events, and startups.</p>
+    
+    <div class="story-slider">
+      <div class="slide active">
+        <img src="img/PassionForDesign.png" alt="Passion for Design">
+        <h3>Passion for Design</h3>
+        <p>Every project is crafted with care, strategy, and creativity to reflect your brand perfectly.</p>
+      </div>
+      <div class="slide">
+        <img src="img/OnTimeDelivery.png" alt="On-Time Delivery">
+        <h3>On-Time Delivery</h3>
+        <p>We believe in reliable timelines and transparent communication from start to finish.</p>
+      </div>
+      <div class="slide">
+        <img src="img/EndToEnd.png" alt="End-to-End Support">
+        <h3>End-to-End Support</h3>
+        <p>From idea to print to digital launch — our team supports you every step of the way.</p>
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
+
+<!-- Meet Our Team -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Meet Our Team</h2>
+    <p class="section-sub">Behind every great design is a passionate team that makes it happen.</p>
+    <div class="team">
+      <div class="team-member">
+        <img src="img/team1.jpg" alt="Founder">
+        <h4>Birender Singh</h4>
+        <p>Founder & Creative Director</p>
+      </div>
+      <div class="team-member">
+        <img src="img/team2.jpg" alt="Designer">
+        <h4>Dinesh Kumar</h4>
+        <p>Graphic Designer</p>
+      </div>
+      <div class="team-member">
+        <img src="img/team3.jpg" alt="Print Manager">
+        <h4>Rohtash Yadav</h4>
+        <p>Print Production Manager</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/918059812423?text=Hello%20Shiva%20Graphics%2C%20I%20want%20to%20enquire%20about%20your%20services" 
+   class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <img src="img/icons8-whatsapp-50 (1).png" alt="Chat on WhatsApp" style="width:50%; height:50%;">
+</a>
+
+<!-- Footer -->
+<footer>
+  <p>© 1997 Shiva Graphics. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu(){ document.getElementById('navLinks').classList.toggle('active'); }
+
+// --- Slider Script ---
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+function showSlides() {
+  slides.forEach((s, i) => {
+    s.classList.remove("active");
+    dots[i].classList.remove("active");
+  });
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1 }
+  slides[slideIndex-1].classList.add("active");
+  dots[slideIndex-1].classList.add("active");
+  setTimeout(showSlides, 4000); // Change slide every 4 seconds
+}
+showSlides();
+</script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shiva Graphics - Clients</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ---------- Hero Section ---------- */
+.hero {
+  height: 400px;
+  background-image: linear-gradient(rgba(0,120,255,.35), rgba(0,120,255,.35)), url('img/contact-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+}
+
+/* ---------- Clients Grid ---------- */
+.clients-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 60px;
+  padding: 50px 20px;
+  justify-items: center;
+  align-items: center;
+}
+.client-logo {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 12px;
+  max-width: 220px;
+}
+.client-logo img {
+  display: block;
+  width: 90%;
+  height: auto;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(1, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.client-logo:hover img {
+  transform: scale(1.15);
+}
+.client-logo .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(251, 250, 250, 0.65);
+  color: #750af0;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.client-logo:hover .overlay {
+  opacity: 1;
+}
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width: 768px) {
+  .clients-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .client-logo {
+    max-width: 160px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .clients-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .client-logo {
+    max-width: 140px;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="img/shiva-logo.png" alt="Logo" style="height:60px;">
+    </a>   
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="clients.html" class="active">Clients</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li>
+        <a href="files/ShivaGraphics-Brochure.pdf" download="ShivaGraphics-Brochure.pdf" title="Download PDF">
+          <i class="fas fa-download"></i>
+        </a>
+      </li>
+      <li class="nav-phone">
+        <span class="separator"></span>
+        <a href="tel:+918059812423" title="Call Us">
+          <i class="fas fa-phone"></i> <span style="color:#070707;">+91 80598 12423</span>
+        </a>
+      </li>
+    </ul>
+ <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <div class="social-icons">
+  <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/shivagraphicsbhiwadi" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/@shivagraphicsbhiwadi" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+  </nav>
+</header>
+
+<!-- ---------- Hero Section ---------- -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Our Clients</h1>
+    <p>We’re here to help you bring your creative ideas to life.</p>
+  </div>
+</section>
+
+<!-- ---------- Clients Grid ---------- -->
+<section>
+  <div class="clients-container">
+    <div class="client-logo">
+      <img src="img/clients/BhiwadiPolymer.png" alt="Client 1">
+      <div class="overlay">BhiwadiPolymer</div>
+    </div>
+    <div class="client-logo">
+      <img src="img/clients/Bida.png" alt="Client 2">
+      <div class="overlay">Bida</div>
+    </div>
+    <div class="client-logo">
+      <img src="img/clients/BKT.png" alt="Client 3">
+      <div class="overlay">BKT</div>
+    </div>
+    <div class="client-logo">
+      <img src="img/clients/Hero.png" alt="Client 4">
+      <div class="overlay">Hero</div>
+    </div>
+    <div class="client-logo">
+      <img src="img/clients/Hyundai.jpeg" alt="Client 5">
+      <div class="overlay">Hyundai</div>
+    </div>
+    <div class="client-logo">
+      <img src="img/clients/IndiaProperty.png" alt="Client 6">
+      <div class="overlay">IndiaProperty</div>
+    </div>
+    <div class="client-logo">
+      <img src="img/clients/Kimia.png" alt="Client 7">
+      <div class="overlay">Kimia</div>
+    </div>
+    <div class="client-logo">
+      <img src="img/clients/Mahindra.png" alt="Client 8">
+      <div class="overlay">Mahindra</div>
+    </div>
+    <div class="client-logo">
+      <img src="img/clients/Pepsi.png" alt="Client 9">
+      <div class="overlay">Pepsi</div>
+    </div>
+    <div class="client-logo">
+      <img src="img/clients/Plantmade.png" alt="Client 10">
+      <div class="overlay">Plant Made</div>
+    </div>
+     <div class="client-logo">
+      <img src="img/clients/Pnb.png" alt="Client 10">
+      <div class="overlay">PNB</div>
+    </div>
+    <div class="client-logo">
+      <img src="img/clients/Saint-Gobain.png" alt="Client 11">
+      <div class="overlay">Saint-Gobain</div>
+  </div>
+    <div class="client-logo">
+      <img src="img/clients/Samsung.png" alt="Client 12">
+      <div class="overlay">Samsung</div>
+    </div>
+    <div class="client-logo">
+      <img src="img/clients/Spicejet.png" alt="Client 13">
+      <div class="overlay">Spice Jet</div>
+    </div>
+    <div class="client-logo">
+      <img src="img/clients/Tvs.png" alt="Client 14">
+      <div class="overlay">TVS</div>
+    </div>
+    
+</section>
+
+<!-- ---------- WhatsApp Button ---------- -->
+<a href="https://wa.me/918059812423?text=Hello%20Shiva%20Graphics%2C%20I%20want%20to%20enquire%20about%20your%20services" 
+   class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <img src="img/icons8-whatsapp-50 (1).png" alt="Chat on WhatsApp" style="width:50%; height:50%;">
+</a>
+
+<!-- ---------- Footer ---------- -->
+<footer>
+  <p>© 1997 Shiva Graphics. All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById('navLinks').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>
